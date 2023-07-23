@@ -1,0 +1,76 @@
+# 如果是文本文件,git时自动转成LF换行,对跟踪过的文件,若为CRLF还是CRLF
+*          text=auto
+
+#diff用来让git使用外部命令来生成差异
+#或者是在生成差异前执行一些动作
+#比如让git将二进制文件转换成文本文件
+#这里用了内置的cpp,让git在.c文本文件上要生成c++的差异
+*.c     text diff=cpp
+*.cc    text diff=cpp
+*.cxx   text diff=cpp
+*.cpp   text diff=cpp
+*.c++   text diff=cpp
+*.hpp   text diff=cpp
+*.h     text diff=cpp
+*.h++   text diff=cpp
+*.hh    text diff=cpp
+
+# 带png后缀的识别成二进制文件,这样就不会更改png文件里的换行了
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
+
+*.slo   binary
+*.lo    binary
+*.o     binary
+*.obj   binary
+
+*.gch   binary
+*.pch   binary
+
+*.so    binary
+*.dylib binary
+*.dll   binary
+
+*.lai   binary
+*.la    binary
+*.a     binary
+*.lib   binary
+
+*.exe   binary
+*.out   binary
+*.app   binary
+
+
+#让git在.cs后缀文件的处理上,将他识别成文本文件,并生成csharp差异
+#或者说*.cs就识别成csharp文件,需要用内置的charp逻辑来处理
+*.cs       text diff=csharp
+*.cshtml   text diff=html
+*.csx      text diff=csharp
+*.sln      text eol=crlf merge=union
+*.csproj   text merge=union
+
+###############################################################################
+#通用文档格式的Diff行为
+#将二进制文档格式转换为文本，然后再对其进行差分。这个特性
+#只在命令行中生效。取消注释来打开它
+###############################################################################
+*.doc   diff=astextplain
+*.DOC   diff=astextplain
+*.docx  diff=astextplain
+*.DOCX  diff=astextplain
+*.dot   diff=astextplain
+*.DOT   diff=astextplain
+*.pdf   diff=astextplain
+*.PDF   diff=astextplain
+*.rtf   diff=astextplain
+*.RTF   diff=astextplain
+
+
+#指定文件后缀,有需要的就加往下加好了
+*.cpp text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.cs text eol=lf
