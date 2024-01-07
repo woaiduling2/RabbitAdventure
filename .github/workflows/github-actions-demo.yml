@@ -16,4 +16,5 @@ jobs:
         run: |
           ls -ah ${{ github.workspace }}
       - run: ls -ah /home/runner
+      - run: whoami
       - run: echo "🍏 This job's status is ${{ job.status }}."
