@@ -16,6 +16,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: mkdir aosp
-      - run: cd aosp
-      - run: git clone https://github.com/Genymobile/scrcpy.git
+      - run: cd aosp && repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/platform/manifest -b android-4.0.1_r1
       - run: echo "🍏 This job's status is ${{ job.status }}."
