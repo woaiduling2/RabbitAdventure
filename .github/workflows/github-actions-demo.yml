@@ -15,5 +15,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: ping -c 10 www.baidu.com
+      - run: ping -c 10 www.google.com
       - run: echo "🍏 This job's status is ${{ job.status }}."
