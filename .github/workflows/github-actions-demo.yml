@@ -17,6 +17,6 @@ jobs:
           ls -ah ${{ github.workspace }}
       - run: ls -ah /home/runner
       - run: whoami
-      - run: curl https://storage.googleapis.com/git-repo-downloads/repo > /home/runner/work/RabbitAdventure/RabbitAdventure
+      - run: curl https://storage.googleapis.com/git-repo-downloads/repo > /home/runner/work/RabbitAdventure/RabbitAdventure/repo
       - run: ls -ah ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
