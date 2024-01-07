@@ -15,7 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: curl https://storage.googleapis.com/git-repo-downloads/repo 
+      - run: curl https://storage.googleapis.com/git-repo-downloads/repo > ${{ github.workspace }}/bin/repo
       - run: ls -ah
       - run: chmod a+x repo
       - run: mkdir aosp
