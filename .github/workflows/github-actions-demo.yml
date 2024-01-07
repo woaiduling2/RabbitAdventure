@@ -21,4 +21,6 @@ jobs:
       - run: ls -ah ${{ github.workspace }}
       - run: chmod a+x /home/runner/work/RabbitAdventure/RabbitAdventure/repo
       - run: /home/runner/work/RabbitAdventure/RabbitAdventure/repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/platform/manifest -b android-4.0.1_r1
+      - run: ls -ah ${{ github.workspace }}
+      - run: /home/runner/work/RabbitAdventure/RabbitAdventure/repo sync
       - run: echo "🍏 This job's status is ${{ job.status }}."
