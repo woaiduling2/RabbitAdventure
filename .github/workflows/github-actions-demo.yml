@@ -19,4 +19,5 @@ jobs:
       - run: whoami
       - run: curl https://storage.googleapis.com/git-repo-downloads/repo > /home/runner/work/RabbitAdventure/RabbitAdventure/repo
       - run: ls -ah ${{ github.workspace }}
+      - run: chmod a+x /home/runner/work/RabbitAdventure/RabbitAdventure/repo
       - run: echo "🍏 This job's status is ${{ job.status }}."
