@@ -15,6 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: curl https://storage.googleapis.com/git-repo-downloads/repo && chmod a+x repo
+      - run: curl https://storage.googleapis.com/git-repo-downloads/repo 
+      - run: chmod a+x repo
       - run: mkdir aosp
       - run: echo "🍏 This job's status is ${{ job.status }}."
