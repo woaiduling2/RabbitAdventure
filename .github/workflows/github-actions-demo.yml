@@ -16,7 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: curl https://storage.googleapis.com/git-repo-downloads/repo 
-      - run: ls
+      - run: ll
       - run: chmod a+x repo
       - run: mkdir aosp
       - run: echo "🍏 This job's status is ${{ job.status }}."
