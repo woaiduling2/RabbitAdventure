@@ -16,4 +16,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: mkdir aosp
+      - run: cd aosp
+      - run: git clone https://github.com/woaiduling2/RabbitAdventure.git
       - run: echo "🍏 This job's status is ${{ job.status }}."
