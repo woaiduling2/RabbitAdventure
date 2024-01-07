@@ -15,5 +15,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: ping -c 10 www.github.com
+      - run: mkdir aosp
       - run: echo "🍏 This job's status is ${{ job.status }}."
